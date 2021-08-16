@@ -5,8 +5,9 @@ import com.boomi.connector.api.Browser;
 import com.boomi.connector.api.Operation;
 import com.boomi.connector.api.OperationContext;
 import com.boomi.pso.connector.terminal.operation.TerminalExecuteOperation;
+import com.boomi.connector.util.BaseConnector;
 
-public class TerminalConnector {
+public class TerminalConnector extends BaseConnector {
 
     @Override
     public Browser createBrowser(BrowseContext browseContext) {

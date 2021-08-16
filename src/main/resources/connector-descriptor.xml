@@ -14,6 +14,6 @@
         </field>
     </operation>
 
-    <dynamicProperty id="cmd" label="Command to Execute" type="string"/>
+    <dynamicProperty id="command" label="Command to Execute" type="string"/>
 
 </GenericConnectorDescriptor>

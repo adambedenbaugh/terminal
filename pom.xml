@@ -74,7 +74,7 @@
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>
-                <version>RELEASE</version>
+                <version>5.7.2</version>
                 <scope>test</scope>
             </dependency>
 
@@ -90,11 +90,6 @@
         <dependency>
             <groupId>com.boomi.connsdk</groupId>
             <artifactId>connector-sdk-util</artifactId>
-            <version>${connector.sdk.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.boomi.connsdk</groupId>
-            <artifactId>connector-sdk-test-util</artifactId>
             <version>${connector.sdk.version}</version>
         </dependency>
         <dependency>
@@ -184,7 +179,7 @@
                         <phase>package</phase>
                         <configuration>
                             <target>
-                                <zip destfile="${basedir}/release/boomi-redis-connector-v${project.version}.zip"
+                                <zip destfile="${basedir}/release/terminal-v${project.version}.zip"
                                      basedir="${basedir}/target"
                                      includes="*--car.zip,connector-descriptor.xml"
                                      update="true"/>
