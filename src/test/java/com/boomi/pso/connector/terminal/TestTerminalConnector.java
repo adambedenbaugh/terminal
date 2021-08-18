@@ -5,6 +5,9 @@ import com.boomi.connector.testutil.ConnectorTester;
 import com.boomi.connector.testutil.SimpleOperationResult;
 import com.boomi.connector.testutil.SimpleTrackedData;
 import org.junit.Test;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.*;
 
 
@@ -23,11 +26,13 @@ public class TestTerminalConnector {
         String objectTypeId = null;
 
         Map<String,String> dynamicProps = new HashMap<>();
-        dynamicProps.put("command", "ipconfig");
+        dynamicProps.put("commandToExecute", "ipconfig");
 
         tester.setOperationContext(OperationType.EXECUTE, connProps, opProps, objectTypeId, null);
+        String data = "ipconfig";
+        InputStream is = new ByteArrayInputStream(data.getBytes());
 
-        SimpleTrackedData simpleTrackedData = new SimpleTrackedData(0,null,null,dynamicProps);
+        SimpleTrackedData simpleTrackedData = new SimpleTrackedData(0,is,null,dynamicProps);
         List<SimpleTrackedData> simpleTrackedDataList = new ArrayList<>();
         simpleTrackedDataList.add(simpleTrackedData);
 

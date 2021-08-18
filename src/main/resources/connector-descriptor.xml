@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenericConnectorDescriptor>
-
     <description>Terminal Connector</description>
-    <field id="sudo" label="Sudo Password" type="password">
-        <helpText>Use sudo with extreme caution!</helpText>
-    </field>
-
-    <operation supportsBrowse="false" types="EXECUTE">
-        <field id="sudo" label="Execute with sudo" type="boolean">
-            <helpText>Use sudo with extreme caution! The sudo password must be populated within the
-                connection.
-            </helpText>
-        </field>
-    </operation>
-
-    <dynamicProperty id="command" label="Command to Execute" type="string"/>
-
+    <operation supportsBrowse="false" types="EXECUTE" trackedDocument="user" />
 </GenericConnectorDescriptor>
