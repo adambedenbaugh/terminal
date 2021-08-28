@@ -1,9 +1,9 @@
-#Terminal Connector
+# Terminal Connector
 
-##Purpose
+## Purpose
 
-The Terminal Connector will execute a command and return data from standard output into the data flow. This can be 
-helpful when the output of a command is required for the integration.
+The Terminal Connector will execute a command and return data from standard output into the data flow. This is 
+helpful when the output of a command is used for a subsequent step within the integration.
 
 The connector and operation require no setup. A new connector and operation does need to be created. It is 
 recommended to enabling 
@@ -19,7 +19,8 @@ and release the connector files.
 
 ### Download the latest release
 
-Download the latest Document Tracker Connector release from the [Releases](https://github.com/adambedenbaugh/document-tracker-connector/releases) page.
+Download the latest Terminal Connector release from the [Releases](https://github.
+com/adambedenbaugh/terminal/releases) page.
 
 You should now have the following files:
 
@@ -39,10 +40,27 @@ Document Tracker Connector connector group.
 ### Using The Connector
 Once you install the connector to your account, you can begin using it like any other application connector.
 
+### How to User the Connector within Boomi
+
+![Process Overview](resources/TerminalProcessOverview.png?raw=true)
 
 
-##Example Use Cases:
+![Command to Execute within a Message Shape](resources/CommandToExecute.png?raw=true)
 
-* Applying document tracking anywhere in the process.  This is especially useful if all the operations are batch.  This connector could be put in line at some point where the documents are split, recording the record id's per document in process reporting and searching by tracked fields.
-* Ability to retrieve documents anywhere in the process from the documents API.  This could be particularly useful for test harness processes and test assertion.
-* Ability to record un-truncated error results or to process reporting or recording documents at specific steps for troubleshooting.  Notify and exception shapes would logically be used, but are truncated at 10K characters.  The return documents shape can accomplish this, but is not usable in webservice processes since this shape is functional.
+The process begins by putting the command to execute within a message shape. Each document going into the connector 
+should be one command. An error will occur if two commands tried to be executed. The above message shape will execute 
+a curl command that will return three random sentences.
+
+![Terminal Connection](resources/TerminalConnection.png?raw=true)
+
+A connection must be created but there is no configuration needed.
+
+![Terminal Operation](resources/TerminalOperation.png?raw=true)
+
+There are two configurations within the operation. The first configuration is the tracked document flow, which will 
+allow you to view the incoming or outgoing message within Process Reporting. The second configuration is how the 
+connector should error. The error can be caught at the connector level or can be caught after the connector with a 
+decision shape.
+
+![Standard Output Written to a Document](resources/DocumentOutput.png?raw=true)
+
