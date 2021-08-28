@@ -22,9 +22,9 @@ and release the connector files.
 Download the latest Terminal Connector release from the [Releases](https://github.
 com/adambedenbaugh/terminal/releases) page.
 
-You should now have the following files:
+You should now have a zip file that contains the following files:
 
-* document-tracker-connector-\<version>--car.zip
+* terminal-\<version>--car.zip
 * connector-descriptor.xml
 
 ### Create a Boomi Connector Group
@@ -34,8 +34,8 @@ Add a custom connector group to your Boomi account by following the instructions
 Using the files that you extracted from the release download, upload the connector to the new connector group by following the instructions described in the Boomi documentation located here: https://help.boomi.com/bundle/connectors/page/t-atm-Adding_a_version_to_a_connector_group.html
 
 ### Upgrading the connector version
-You can upgrade your Document Tracker Connector version by clicking the "Add Version" button in your existing
-Document Tracker Connector connector group.
+You can upgrade your Terminal Connector version by clicking the "Add Version" button in your existing
+Terminal Connector connector group.
 
 ### Using The Connector
 Once you install the connector to your account, you can begin using it like any other application connector.
