@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteTargetsManager">
+    <targets>
+      <target name="adambedenbaugh@172.104.212.172:22" type="ssh/sftp">
+        <config>
+          <option name="projectRootOnTarget" value="/home/adambedenbaugh/terminal" />
+          <option name="serverName" value="adambedenbaugh@172.104.212.172:22 password" />
+        </config>
+        <ContributedStateBase type="JavaLanguageRuntime">
+          <config>
+            <option name="homePath" value="/usr" />
+            <option name="javaVersionString" value="1.8.0_292" />
+          </config>
+        </ContributedStateBase>
+      </target>
+      <target name="WSL - Ubuntu-20.04" type="wsl">
+        <config>
+          <option name="distributionMsId" value="Ubuntu-20.04" />
+          <option name="projectRootOnTarget" value="/mnt/c/Users/adam_bedenbaugh/AppData/Local/JetBrains/Toolbox/apps/IDEA-U/ch-0/212.5080.55/jbr/bin&#10;/terminal" />
+        </config>
+        <ContributedStateBase type="JavaLanguageRuntime">
+          <config>
+            <option name="homePath" value="/usr" />
+            <option name="javaVersionString" value="1.8.0_292" />
+          </config>
+        </ContributedStateBase>
+      </target>
+    </targets>
+  </component>
+</project>

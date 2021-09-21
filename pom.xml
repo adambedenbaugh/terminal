@@ -31,7 +31,6 @@
                 <groupId>com.boomi.connsdk</groupId>
                 <artifactId>connector-sdk-api</artifactId>
                 <version>${connector.sdk.version}</version>
-
             </dependency>
             <dependency>
                 <groupId>com.boomi.util</groupId>

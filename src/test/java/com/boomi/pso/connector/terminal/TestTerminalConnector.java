@@ -26,10 +26,10 @@ public class TestTerminalConnector {
         String objectTypeId = null;
 
         Map<String,String> dynamicProps = new HashMap<>();
-        dynamicProps.put("commandToExecute", "ipconfig");
+        dynamicProps.put("commandToExecute", "whereis java");
 
         tester.setOperationContext(OperationType.EXECUTE, connProps, opProps, objectTypeId, null);
-        String data = "ipconfig";
+        String data = "whereis java";
         InputStream is = new ByteArrayInputStream(data.getBytes());
 
         SimpleTrackedData simpleTrackedData = new SimpleTrackedData(0,is,null,dynamicProps);
