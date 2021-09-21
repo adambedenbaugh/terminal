@@ -19,8 +19,7 @@ and release the connector files.
 
 ### Download the latest release
 
-Download the latest Terminal Connector release from the [Releases](https://github.
-com/adambedenbaugh/terminal/releases) page.
+Download the latest Terminal Connector release from the [Releases](https://github.com/adambedenbaugh/terminal/releases) page.
 
 You should now have a zip file that contains the following files:
 
